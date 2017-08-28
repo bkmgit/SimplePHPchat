@@ -35,6 +35,16 @@ Setup database
 
 * ```mysql -u root -p```
 
+options should be
+
+* ```CREATE DATABASE myChat;```
+
+* ```GRANT ALL ON myChat.* to 'mychatuser'@'localhost' IDENTIFIED BY 'a_password_of_your_choice';```
+
+* ```FLUSH PRIVILEGES;```
+
+* ```EXIT;```
+
 * ```sudo systemctl restart httpd.service```
 
 Go to web directory and place files in
