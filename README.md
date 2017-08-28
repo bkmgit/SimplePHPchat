@@ -84,4 +84,4 @@ Go to web directory and place files in
 
 
 ## Acknowledgements
-Günther Froelich
+Günther Frölich
