@@ -45,6 +45,8 @@ options should be
 
 * ```EXIT;```
 
+Restart webserver
+
 * ```sudo systemctl restart httpd.service```
 
 Go to web directory and place files in
