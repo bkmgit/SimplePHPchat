@@ -1,11 +1,11 @@
 
 /*
 
-This is the main page for the chat application. It given a username and chat room,
+This is the main page for the chat application. If given a username and chat room,
 users can chat by entering text. Possible changes  include using a text file to store 
 the chat, or using shared memory. For the database, processing of added entries needs 
-to be improved, in particular to support non-ascii characters, formatting and emoji.
-Also need to remove debug messages.
+to be improved, in particular to support formatting and emoji. Also need to remove 
+debug messages.
 */
 
 <?php
@@ -43,8 +43,8 @@ class TableRows extends RecursiveIteratorIterator {
 
 $servername = "localhost";
 $username = "mychatuser";
-$password = "SQd9yqNcgLAk28Yq";
-$dbname = "mychatDB";
+$password = "mypwd";
+$dbname = "myChat";
 
 // define variables and set to empty values
 $comment = "";
@@ -77,21 +77,23 @@ function test_input($data) {
 </script>
 
 <?php
-try {
-    $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
-    // set the PDO error mode to exception
-    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-    $sql = "INSERT INTO " . $_SESSION["chat"] . "(name, message) VALUES ( '" . $_SESSION["name"] . "', '" .$comment . "')";
-    // use exec() because no results are returned
-    $conn->exec($sql);
-    echo "New record created successfully by " .$_SESSION["name"] . " with message " . $comment . "<br>";
+if ( $comment != ""){
+  try {
+      $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
+      // set the PDO error mode to exception
+      $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+      $sql = $conn->prepare("INSERT INTO " . $_SESSION["chat"] . "(name, message) VALUES ( '" . $_SESSION["name"] . "', '" .$c
+omment . "')");
+      $sql->execute();
+      echo "New record created successfully by " .$_SESSION["name"] . " with message " . $comment . "<br>";
+      $comment="";
     }
-catch(PDOException $e)
+    catch(PDOException $e)
     {
-    echo $sql . "<br>" . $e->getMessage();
+      echo $sql . "<br>" . $e->getMessage();
     }
-
-$conn = null;
+   $conn = null;
+}
 
 try {
     $conn = new PDO("mysql:host=$servername;dbname=$dbname", $username, $password);
