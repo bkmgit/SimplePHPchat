@@ -83,6 +83,7 @@ Go to web directory and place files in
 * https://www.codeproject.com/articles/637657/html-real-time-chat-with-websockets-jquery-and-sp
 * https://github.com/emitter-io/emitter
 * https://github.com/nextcloud/spreed/issues/35
+* http://portal.bluejack.binus.ac.id/tutorials/webchatapplicationusinglong-pollingtechnologywithphpandajax
 
 
 ## Acknowledgements
