@@ -94,3 +94,6 @@ Go to web directory and place files in
 
 [Günther Frölich](http://www.cloudmasters.at/kontakt)
 
+Frank Karlitschek
+
+Daniel Calviño Sánchez
