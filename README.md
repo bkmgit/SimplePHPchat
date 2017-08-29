@@ -84,6 +84,8 @@ Go to web directory and place files in
 * https://github.com/emitter-io/emitter
 * https://github.com/nextcloud/spreed/issues/35
 * http://portal.bluejack.binus.ac.id/tutorials/webchatapplicationusinglong-pollingtechnologywithphpandajax
+* https://stackoverflow.com/questions/11497611/php-auto-refreshing-page
+* http://www.phpbuilder.com/articles/application-architecture/optimization/creating-real-time-applications-with-php-and-websockets.html
 
 
 ## Acknowledgements
