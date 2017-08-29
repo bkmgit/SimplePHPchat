@@ -86,4 +86,6 @@ Go to web directory and place files in
 
 
 ## Acknowledgements
+Mario Danic
 Günther Frölich
+
