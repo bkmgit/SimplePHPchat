@@ -86,6 +86,8 @@ Go to web directory and place files in
 
 
 ## Acknowledgements
-Mario Danic
-Günther Frölich
+
+[Mario Đanić](https://github.com/mario)
+
+[Günther Frölich](http://www.cloudmasters.at/kontakt)
 
